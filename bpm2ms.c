@@ -12,13 +12,13 @@ void printRow(char * cell1, char * cell2) {
 int main(int argc, char ** args) {
     double bpm = atof(args[1]);
     double ms[NB_DIV];
-    char mschar[MS_LEN][NB_DIV];
-    char divchar[MS_LEN][NB_DIV];
+    char mschar[NB_DIV][MS_LEN];
+    char divchar[NB_DIV][MS_LEN];
 
     // First row
     sprintf(divchar[0], "1/1");
     ms[0] = (bpm/60)*1000;
-    sprintf(mschar[0], "%.0f", ms[0]);
+    sprintf(mschar[0], "%.0f ms", ms[0]);
     printRow("1/1", mschar[0]);
 
     // Other rows
